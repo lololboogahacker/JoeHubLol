@@ -782,7 +782,7 @@ elseif game.PlaceId == 7860844204 then
                 
                 local Config = {
                   WindowName = "JOE HUB",
-                  Color = Color3.fromRGB(255,87,0),
+                  Color = Color3.fromRGB(255,128,64),
                   Keybind = Enum.KeyCode.RightControl
                 }
                 
@@ -845,7 +845,7 @@ elseif game.PlaceId == 7860844204 then
                     getgenv().killaura = false
                     game.StarterGui:SetCore("ChatMakeSystemMessage", {
                       Text = "[JOE]: Disabled Killaura",
-                      Color = Color3.fromRGB(255, 150, 150),
+                      Color = Color3.fromRGB(255, 100, 150),
                       Font = Enum.Font.SourceSansBold,
                       FontSize = Enum.FontSize.Size24
                     })
@@ -853,7 +853,7 @@ elseif game.PlaceId == 7860844204 then
                     getgenv().killaura = true
                     game.StarterGui:SetCore("ChatMakeSystemMessage", {
                       Text = "[JOE]: Enabled Killaura",
-                      Color = Color3.fromRGB(255, 150, 150),
+                      Color = Color3.fromRGB(30, 255, 30),
                       Font = Enum.Font.SourceSansBold,
                       FontSize = Enum.FontSize.Size24
                     })
@@ -1354,7 +1354,7 @@ elseif game.PlaceId == 7860844204 then
                 wait(1.5)
                 
                 playerHead.CFrame = CFrame.new(74.8618622, -3.24557328, 1457.4646, -0.137807131, -0.138335854, 0.980750918, -0.0462418757, 0.990017176, 0.133145332, -0.989379048, -0.0270033851, -0.142828226) 
-                wait(0.0221132143235434645645)
+                wait(0.03)
                 
                 player = game.Players.LocalPlayer.Character
                 player.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.Part.CFrame
