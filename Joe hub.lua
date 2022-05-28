@@ -977,7 +977,7 @@ elseif game.PlaceId == 7860844204 then
                 
                 
                 
-                local Slider1 = Section1:CreateSlider("Speed", 16,18.6,nil,true, function(Value)
+                local Slider1 = Section1:CreateSlider("Speed", 16,18,nil,true, function(Value)
                   getgenv().Speed = Value;
                 end)
                 Slider1:SetValue(16)
