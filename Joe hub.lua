@@ -19,6 +19,10 @@ if game.PlaceId == 6488220605 then
 	--local Section2 = Tab1:CreateSection("Second Section")
 	local Section3 = Tab2:CreateSection("Menu")
 	local Section4 = Tab2:CreateSection("Background")
+
+	game:GetService("Workspace").World1.kickpart2:Destroy()
+	game:GetService("Workspace").World1.kickpart:Destroy()
+	game:GetService("Workspace").kickpart:Destroy()
 	
 	
 	local root = game.Players.LocalPlayer.Character.HumanoidRootPart
@@ -73,7 +77,14 @@ if game.PlaceId == 6488220605 then
 	end)
 	
 	
-	
+		local Toggle1 = Section1:CreateToggle("Inf-Jump", nil, function(State)
+			getgenv().InfiniteJumpEnabled = State
+			game:GetService("UserInputService").JumpRequest:connect(function()
+				if InfiniteJumpEnabled then
+					game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+				end
+			end)
+	end)
 	-------------
 	local Toggle1 = Section1:CreateToggle("Hit-Box-Expander", nil, function(State)
 		getgenv().bruh = State
@@ -230,7 +241,7 @@ if game.PlaceId == 6488220605 then
 	local Slider4 = Section4:CreateSlider("Tile Scale",0,1,nil,false, function(Value)
 		Window:SetTileScale(Value)
 	end)
-	Slider4:SetValue(0.15)
+	Slider4:SetValue(0.12)
 elseif game.PlaceId == 7860844204 then
     local Config = {
         WindowName = "Joe Hub",
@@ -538,7 +549,7 @@ elseif game.PlaceId == 7860844204 then
     local Slider4 = Section4:CreateSlider("Tile Scale",0,1,nil,false, function(Value)
         Window:SetTileScale(Value)
     end)
-    Slider4:SetValue(0.15)
+    Slider4:SetValue(0.12)
     
     function collectmoney()
         spawn(function()
@@ -766,7 +777,7 @@ elseif game.PlaceId == 7860844204 then
                     local Slider4 = Section4:CreateSlider("Tile Scale",0,1,nil,false, function(Value)
                         Window:SetTileScale(Value)
                     end)
-                    Slider4:SetValue(0.15)
+                    Slider4:SetValue(0.12)
                 elseif game.PlaceId == 8131316275 or 8131331959 then
                     if game.PlaceId == 8131316275 then
                     game.Lighting.SunRays.Intensity = 0.25
@@ -1594,7 +1605,7 @@ elseif game.PlaceId == 7860844204 then
                 local Slider4 = Section4:CreateSlider("Tile Scale",0,1,nil,false, function(Value)
                   Window:SetTileScale(Value)
                 end)
-                Slider4:SetValue(0.15)
+                Slider4:SetValue(0.12)
             elseif game.PlaceId == 1537690962 then
                 local Config = {
                     WindowName = "Joe Hub",
@@ -1701,4 +1712,4 @@ elseif game.PlaceId == 7860844204 then
                 local Slider4 = Section4:CreateSlider("Tile Scale",0,1,nil,false, function(Value)
                     Window:SetTileScale(Value)
                 end)
-                Slider4:SetValue(0.15) end
+                Slider4:SetValue(0.12) end
