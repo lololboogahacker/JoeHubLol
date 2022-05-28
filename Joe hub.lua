@@ -37,7 +37,7 @@ if game.PlaceId == 6488220605 then
 		 if getgenv().bruh then
 	 v.Character.HumanoidRootPart.Size = Vector3.new(getgenv().HeadSize,getgenv().HeadSize,getgenv().HeadSize)
 	 v.Character.HumanoidRootPart.Transparency = 0.65   -- edit if you want it to be visible or transparent
-	 v.Character.HumanoidRootPart.Color = Color3.fromRGB(getgenv().Color1)
+	 v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really red")
 	 v.Character.HumanoidRootPart.Material = "Smooth Plastic"
 	 v.Character.HumanoidRootPart.CanCollide = false else
 	 v.Character.HumanoidRootPart.Size = Vector3.new(2, 2, 1)
@@ -112,17 +112,8 @@ Section1:CreateToggle("Inf-Jump", nil, function(State)
 	end)
 	
 	
-	hitboxslider:SetValue(10)
+	hitboxslider:SetValue(5)
 	
-	Section1:CreateButton("Tp To Purple Island", function()
-	local playerHead = game.Players.LocalPlayer.Character.HumanoidRootPart
-	
-	game:GetService("ReplicatedStorage").PlayerTP:FireServer()
-	
-	wait(0.85)
-	
-	playerHead.CFrame = game:GetService("Workspace").tppart2.CFrame
-	end)
 	
 	
 	Section1:CreateButton("Tp to Spawn (1st island)", function()
