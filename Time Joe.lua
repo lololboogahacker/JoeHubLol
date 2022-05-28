@@ -22,7 +22,6 @@ local mt = getrawmetatable(game)
                         
                         return namecall(self, ...)
                     end)
-                    
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/AlexR32/Roblox/main/BracketV3.lua"))()
 local Window = Library:CreateWindow(Config, game:GetService("CoreGui"))
@@ -141,7 +140,7 @@ Section1:CreateButton("Dash (F)", function()
 		if key == "f" then
 			lol = 0
 			while lol == 0 do
-				wait(0.08)
+				wait(0.1)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame *= CFrame.new(0, 0, -5) end end
 	end)
 
