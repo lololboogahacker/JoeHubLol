@@ -1,4 +1,6 @@
-if game.PlaceId == 8131316275 or 8131331959 then
+if game.PlaceId == 8131316275 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/IrishGypsyUser/JoeHubLol/main/Booga%20joe.lua"))()end
+if game.PlaceId == 8131331959 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/IrishGypsyUser/JoeHubLol/main/Booga%20joe.lua"))()end
 if game.PlaceId == 1537690962 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/IrishGypsyUser/JoeHubLol/main/Bee%20joe.lua"))()end
