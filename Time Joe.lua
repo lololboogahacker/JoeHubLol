@@ -36,7 +36,7 @@ local Config = {
 		 if getgenv().bruh then
 	 v.Character.HumanoidRootPart.Size = Vector3.new(getgenv().HeadSize,getgenv().HeadSize,getgenv().HeadSize)
 	 v.Character.HumanoidRootPart.Transparency = 0.65   -- edit if you want it to be visible or transparent
-	 v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really red")
+	 v.Character.HumanoidRootPart.Color3 = getgenv().hitboxexpandercolor
 	 v.Character.HumanoidRootPart.Material = "Smooth Plastic"
 	 v.Character.HumanoidRootPart.CanCollide = false else
 	 v.Character.HumanoidRootPart.Size = Vector3.new(2, 2, 1)
@@ -109,6 +109,10 @@ Section1:CreateToggle("Inf-Jump", nil, function(State)
 	local hitboxslider = Section1:CreateSlider("Hit-Box-Size",7,14,nil,false, function(Value)
 		getgenv().HeadSize = Value
 	end)
+
+Section1:CreateColorpicker("Hitbox Color", function(Color)
+getgenv().hitboxexpandercolor = Color;
+                end)
 	
 	
 	hitboxslider:SetValue(5)
