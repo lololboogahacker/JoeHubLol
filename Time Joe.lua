@@ -6,7 +6,23 @@ local Config = {
 
 game:GetService("ReplicatedStorage").AntiCheat.Punish:Destroy()
 
-
+local mt = getrawmetatable(game)
+                    make_writeable(mt)
+                    
+                    local namecall = mt.__namecall
+                    
+                    mt.__namecall = newcclosure(function(self, ...)
+                        local method = getnamecallmethod()
+                        
+                        if method == "Kick" or method == "kick" then
+                            return wait(9e9)
+                        end
+                        
+                    
+                        
+                        return namecall(self, ...)
+                    end)
+                    
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/AlexR32/Roblox/main/BracketV3.lua"))()
 local Window = Library:CreateWindow(Config, game:GetService("CoreGui"))
@@ -125,7 +141,7 @@ Section1:CreateButton("Dash (F)", function()
 		if key == "f" then
 			lol = 0
 			while lol == 0 do
-				wait(0.095)
+				wait(0.08)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame *= CFrame.new(0, 0, -5) end end
 	end)
 
