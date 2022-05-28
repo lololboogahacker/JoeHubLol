@@ -63,7 +63,7 @@ if game.PlaceId == 6488220605 then
 					break;
 				end
 			end 
-	
+	wait(.05)
 			local playerHead = game.Players.LocalPlayer.Character.HumanoidRootPart
 			for i, v in pairs(game:GetService("Workspace").BoxSecond:GetDescendants()) do
 				if v.Name == "TouchInterest" and v.Parent then 
