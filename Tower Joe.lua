@@ -73,9 +73,10 @@ local Config = {
                     game:GetService("ReplicatedStorage").openBox:InvokeServer(unpack(args))
                     end)
                     
-                    Section1:CreateButton("Become Invincible")
+                    Section1:CreateButton("Become Invincible",function()
                     game.Players.LocalPlayer.Character.KillScript:Destroy()
                     game.Players.LocalPlayer.Character.hitboxScript:Destroy()
+                    end)
                     
                     
                     
