@@ -1639,11 +1639,7 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame wait(0.37)
 						end
 				end)
                 -------------
-                 misc:CreateToggle("Auto-Scoop", nil, function(State)
-                    getgenv().autoscoop = State
-                    while autoscoop do wait() 
-                        game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Tool").ClickEvent:FireServer() end		
-                end)
+               
                 
                 -------------
                 misc:CreateDropdown("Teleports", {"Mushroom Field","Strawberry Field","Pumpkin Patch","Sunflower Field","Blue Flower Field","Mountain Top Field","Bamboo Field","Spider Field","Pine Tree Forest","Rose Field","Cactus Field","Stump Field","Clover Field","Coconut Field","Pepper Patch","Pineapple Patch","Dandelion Field"}, function(String)
@@ -1691,9 +1687,11 @@ game:GetService("ReplicatedStorage").Events.ToyEvent:FireServer(unpack(args))
 				end)
 
 				
-                -------------
-                
-                -------------
+				misc:CreateToggle("Auto-Scoop", nil, function(State)
+                    getgenv().autoscoop = State
+                    while autoscoop do wait() 
+                        game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Tool").ClickEvent:FireServer() end		
+                end)
                 
                 
                 local Toggle3 = Section3:CreateToggle("UI Toggle", nil, function(State)
