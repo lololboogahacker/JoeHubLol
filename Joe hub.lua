@@ -116,12 +116,12 @@ Section1:CreateToggle("Inf-Jump", nil, function(State)
 	
 	
 	
-	Section1:CreateButton("Tp to Spawn (1st island)", function()
+	Section1:CreateButton("Tp To Spawn (1st island)", function()
 		game:GetService("ReplicatedStorage").PlayerTP:FireServer()
 	end)
 	
 	
-	Section1:CreateButton("Tp to Spawn (2nd island)", function()
+	Section1:CreateButton("Tp To Spawn (2nd island)", function()
 		local playerHead = game.Players.LocalPlayer.Character.HumanoidRootPart
 	
 		game:GetService("ReplicatedStorage").PlayerTP:FireServer()
