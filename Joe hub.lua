@@ -77,7 +77,7 @@ if game.PlaceId == 6488220605 then
 	end)
 	
 	
-		local Toggle1 = Section1:CreateToggle("Inf-Jump", nil, function(State)
+Section1:CreateToggle("Inf-Jump", nil, function(State)
 			getgenv().InfiniteJumpEnabled = State
 			game:GetService("UserInputService").JumpRequest:connect(function()
 				if InfiniteJumpEnabled then
