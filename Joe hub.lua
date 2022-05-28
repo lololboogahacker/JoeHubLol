@@ -10,3 +10,5 @@ if game.PlaceId == 6488220605 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/IrishGypsyUser/JoeHubLol/main/Time%20Joe.lua"))()end
 if game.PlaceId == 1962086868 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/IrishGypsyUser/JoeHubLol/main/Tower%20Joe.lua"))()end
+if game.PlaceId == 3582763398 then
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/IrishGypsyUser/JoeHubLol/main/Tower%20Joe.lua"))()end
