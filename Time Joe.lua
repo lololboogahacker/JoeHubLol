@@ -140,7 +140,7 @@ Section1:CreateButton("Dash (F)", function()
 		if key == "f" then
 			lol = 0
 			while lol == 0 do
-				wait(0.08)
+				wait(0.075)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame *= CFrame.new(0, 0, -5) end end
 	end)
 
