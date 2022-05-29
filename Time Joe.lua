@@ -69,7 +69,7 @@ Section1:CreateButton("Collect Some Boxes (E)", function()
 	mouse.KeyDown:Connect(function(key)
 if key == "e" then
 		local playerHead = game.Players.LocalPlayer.Character.HumanoidRootPart
-		for i, v in pairs(game:GetService("Workspace").Box:GetDescendants()) do
+		for i, v in pairs(game:GetService("Workspace").Box:GetChildren()) do
 			if v.Name == "TouchInterest" and v.Parent then 
 				firetouchinterest(playerHead, v.Parent, 0)
 				wait(0.1)
@@ -79,7 +79,7 @@ if key == "e" then
 		end 
 wait(.1)
 		local playerHead = game.Players.LocalPlayer.Character.HumanoidRootPart
-		for i, v in pairs(game:GetService("Workspace").BoxSecond:GetDescendants()) do
+		for i, v in pairs(game:GetService("Workspace").BoxSecond:GetChildren()) do
 			if v.Name == "TouchInterest" and v.Parent then 
 				firetouchinterest(playerHead, v.Parent, 0)
 				wait(0.1)
